@@ -72,8 +72,10 @@ Launch the Firefox docker container with the following command:
 
 ```shell
 docker run -d \
-    --name=firefox-setup \
+    --name=firefox-kiosk \
     -p 80:5800 \
+	-e FF_OPEN_URL="https://gmail.com" \
+	-e FF_KIOSK=1 \
     -v ~/firefox_data:/config:rw \
 	--shm-size 2g \
     jlesage/firefox
