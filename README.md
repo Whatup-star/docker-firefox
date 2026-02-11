@@ -75,7 +75,7 @@ docker run -d \
     --name=firefox-setup \
     -p 80:5800 \
     -v ~/firefox_data:/config:rw \
-	-shm-size 2g \
+	--shm-size 2g \
     jlesage/firefox
 ```
 
